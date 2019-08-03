@@ -1,0 +1,47 @@
+// the add() method ArrayList
+  We can classify this method by thinking
+about the average number of operations per add over a series of n adds. For
+simplicity, assume we start with an array that has room for 2 elements.
+
+  A function: 2n-2
+To do n adds, we have to store n elements
+and copy n−2. So the total number of operations is n+n−2, which is 2n−2.
+
+  '*' - a filled cell;
+
+  1. * ; (first)
+  2. * ; (second)
+  3. The first and second put together like * + * and multiply by '2'.
+  The size of the array is 4 now. Then copy the first and second cells and store
+  the next * .
+  4. * . Looks like: * + * + * + * .  -After 4 adds, we’ve stored 4 elements and copied 2.
+  5. The previous size multiply by '2'.
+  The size of the array is 8 now. Then copy the first, second, third and fourth cells
+  and store the next * .
+  Looks like: * + * + * + * + * .  -After 5 adds, we’ve stored 3 elements
+  6. * ;
+  7. * ;
+  8. * ; -After 8 adds, we’ve stored 8 elements and copied 6.
+
+
+  1. The first time we call add, it finds unused space in the array, so it stores
+1 element.
+
+  2. The second time, it finds unused space in the array, so it stores 1 element.
+
+  3. The third time, we have to resize the array, copy 2 elements, and store
+1 element. Now the size of the array is 4.
+
+  4. The fourth time stores 1 element.
+
+  5. The fifth time resizes the array, copies 4 elements, and stores 1 element.
+Now the size of the array is 8.
+
+  6. The next 3 adds store 3 elements.
+    And so on...
+
+
+     Adding things up:
+  -After 4 adds, we’ve stored 4 elements and copied 2.
+  -After 8 adds, we’ve stored 8 elements and copied 6.
+  -After 16 adds, we’ve stored 16 elements and copied 14.
