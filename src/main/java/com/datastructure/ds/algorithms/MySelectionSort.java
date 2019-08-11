@@ -1,5 +1,6 @@
 package com.datastructure.ds.algorithms;
 
+// selection sort
 public class MySelectionSort {
     public static void main(String[] args) {
         int[] a = {30,20,60,70,40,10,90};

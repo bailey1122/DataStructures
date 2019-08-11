@@ -1,5 +1,6 @@
 package com.datastructure.ds.algorithms;
 
+// insertion sort
 public class MyInsertionSort {
     public static void main(String[] args) {
         int[] a = {15,2,1,4,6,3};

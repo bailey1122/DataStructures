@@ -1,0 +1,8 @@
+'s' is the length of the longest string;
+'a' is the length of the array;
+
+1. Sorting each string is     O(s log s).
+2. Do this for every string(and there are 'a' strings), so that's     O(a*s log s).
+3. Each string comparison takes O(s) time. There are O(a log a) comparisons, therefore
+this will take O(a*s log a) time.
+4. Add up these two parts, you get O(a*s(log a + log s));

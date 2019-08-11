@@ -1,5 +1,6 @@
 package com.datastructure.ds.algorithms;
 
+// bubble sort
 public class MyBubbleSort {
     public static void main(String[] args) {
         int[] a = {40,30,50,20,70};
