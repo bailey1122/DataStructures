@@ -1,14 +1,14 @@
 package com.datastructure.ds.algorithms;
 
 // divide and conquer. Merge sort
-public class MergeSort {
+public class MyMergeSort {
     int[] array;
     int[] tempMergeArr;
     int length;
 
     public static void main(String[] args) {
         int[] inputArr = {10,80,40,30,70,20,90};
-        MergeSort ms = new MergeSort();
+        MyMergeSort ms = new MyMergeSort();
         ms.sort(inputArr);
 
         for (int i : inputArr) {

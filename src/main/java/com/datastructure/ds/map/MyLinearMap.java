@@ -142,7 +142,7 @@ public class MyLinearMap<K, V> implements Map<K, V> {
     // returns a reference to 'entries'
     // this is not part of the Map interface; it is here to provide the functionality
     // of 'entrySet' in a way that is substantially simpler than 'right' way
-    protected Collection<? extends java.util.Map.Entry<K, V>> getEntries() {
+    public Collection<? extends java.util.Map.Entry<K, V>> getEntries() {
         return entries;
     }
 }

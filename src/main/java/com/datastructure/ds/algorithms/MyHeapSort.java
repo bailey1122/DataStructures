@@ -1,12 +1,12 @@
 package com.datastructure.ds.algorithms;
 
 // heap sort
-public class HeapSort {
+public class MyHeapSort {
     public static void main(String[] args) {
         int[] arr = {40, 20, 60, 90, 80, 70, 50};
-        HeapSort heapSort = new HeapSort();
-        heapSort.sort(arr);
-        heapSort.printArray(arr);
+        MyHeapSort myHeapSort = new MyHeapSort();
+        myHeapSort.sort(arr);
+        myHeapSort.printArray(arr);
     }
 
     void sort(int[] arr) {

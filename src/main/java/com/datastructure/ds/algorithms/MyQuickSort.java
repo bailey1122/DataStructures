@@ -1,12 +1,12 @@
 package com.datastructure.ds.algorithms;
 
 // quick sort
-public class QuickSort {
+public class MyQuickSort {
     public static void main(String[] args) {
         int[] arr = {80, 40, 50, 60, 20, 10, 30, 90, 70};
 
         int leng = arr.length;
-        QuickSort qsr = new QuickSort();
+        MyQuickSort qsr = new MyQuickSort();
         qsr.quickSortRecursion(arr, 0, leng-1);
         qsr.printArray(arr);
     }
