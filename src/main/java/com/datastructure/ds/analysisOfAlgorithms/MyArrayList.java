@@ -329,6 +329,7 @@ public class MyArrayList<T> implements List<T> {
             for (int r = 0; r < marray2[e].length; r++) {
                 System.out.print(marray2[e][r] + " ");
             }
+            System.out.println(" ");
         }
 
 

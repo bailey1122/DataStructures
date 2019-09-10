@@ -1,5 +1,7 @@
 package com.datastructure.ds.circularSinglyLinkedList;
 
+import java.util.NoSuchElementException;
+
 public class CircularSinglyLinkedList {
     private ListNode last;
     private int length;
@@ -65,16 +67,33 @@ public class CircularSinglyLinkedList {
     }
 
     public void insertAtTheEnd(int data) {
-        ListNode tempt = new ListNode(data);
+        ListNode temp = new ListNode(data);
         if (last == null) {
-            last = tempt;
+            last = temp;
             last.next = last;
         } else {
-            tempt.next = last.next; // bound the new node to the next one and the next one to the last one
-            last.next = tempt;
-            last = tempt;
+            temp.next = last.next; // bound the new node to the next one and the next one to the last one
+            last.next = temp;
+            last = temp;
         }
         length++;
+    }
+
+    public int removeFirst() {
+        if (isEmpty()) {
+            throw new NoSuchElementException();
+        }
+
+        ListNode temp = last.next;
+        int result = temp.data;
+        if (last.next == last) {
+            last = null;
+        } else {
+            last.next = temp.next;
+        }
+//        temp.next = null; // automatically delete by java
+        length--;
+        return result;
     }
 
 
