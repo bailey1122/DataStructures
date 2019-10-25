@@ -1,5 +1,6 @@
 package com.datastructure.ds.binarySearchTree;
 
+// it doesn't work on leetcode
 public class BinarySearchTree {
     boolean checkBST(Node2 root, int min, int max) { // inclusive ranges
         if (root == null) {
