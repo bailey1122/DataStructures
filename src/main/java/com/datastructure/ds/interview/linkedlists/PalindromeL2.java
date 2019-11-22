@@ -1,13 +1,10 @@
 package com.datastructure.ds.interview.linkedlists;
 
+import com.datastructure.ds.interview.impl.LinkedListNode;
+
 import java.util.Stack;
 
 public class PalindromeL2 {
-
-    private class LinkedListNode {
-        private int data;
-        private LinkedListNode next;
-    }
 
     boolean isPalindrome(LinkedListNode head) {
         LinkedListNode fast = head;

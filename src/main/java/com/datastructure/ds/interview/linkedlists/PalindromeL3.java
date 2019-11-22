@@ -1,11 +1,8 @@
 package com.datastructure.ds.interview.linkedlists;
 
-public class PalindromeL3 {
+import com.datastructure.ds.interview.impl.LinkedListNode;
 
-    protected class LinkedListNode {
-        private int data;
-        private LinkedListNode next;
-    }
+public class PalindromeL3 {
 
     boolean isPalindrome(LinkedListNode head) {
         int len = lengthNodes(head);
@@ -43,13 +40,13 @@ public class PalindromeL3 {
 }
 
 class Result {
-    public PalindromeL3.LinkedListNode node;
+    public LinkedListNode node;
     public boolean result;
 
     public Result() {
     }
 
-    public Result(PalindromeL3.LinkedListNode node, boolean result) {
+    public Result(LinkedListNode node, boolean result) {
         this.node = node;
         this.result = result;
     }

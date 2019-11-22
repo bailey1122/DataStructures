@@ -1,11 +1,8 @@
 package com.datastructure.ds.interview.linkedlists;
 
-public class Partition2 {
+import com.datastructure.ds.interview.impl.LinkedListNode;
 
-    private class LinkedListNode {
-        private int data;
-        private LinkedListNode next;
-    }
+public class Partition2 {
 
     LinkedListNode partition2(LinkedListNode node, int x) {
         LinkedListNode head = node;

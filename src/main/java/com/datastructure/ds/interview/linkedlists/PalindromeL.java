@@ -1,17 +1,8 @@
 package com.datastructure.ds.interview.linkedlists;
 
+import com.datastructure.ds.interview.impl.LinkedListNode;
+
 public class PalindromeL {
-
-    private class LinkedListNode {
-        private int data;
-        private LinkedListNode next;
-
-        public LinkedListNode() {}
-
-        public LinkedListNode(int data) {
-            this.data = data;
-        }
-    }
 
     boolean isPalindrome(LinkedListNode head) {
         LinkedListNode reversed = reverseAndClone(head);

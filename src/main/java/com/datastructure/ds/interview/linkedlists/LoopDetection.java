@@ -1,11 +1,8 @@
 package com.datastructure.ds.interview.linkedlists;
 
-public class LoopDetection {
+import com.datastructure.ds.interview.impl.LinkedListNode;
 
-    private class LinkedListNode {
-        private int data;
-        private LinkedListNode next;
-    }
+public class LoopDetection {
 
     LinkedListNode findBeginning(LinkedListNode head) {
         LinkedListNode slow = head;

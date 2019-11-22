@@ -1,16 +1,13 @@
 package com.datastructure.ds.interview.linkedlists;
 
+import com.datastructure.ds.interview.impl.LinkedListNode;
+
 // O(n) space
 class Index {
     public int value = 0;
 }
 
 public class ReturnKthToLast2 {
-
-    private class LinkedListNode {
-        private int data;
-        private LinkedListNode next;
-    }
 
     LinkedListNode kthToLast(LinkedListNode head, int k) {
         Index idx = new Index();

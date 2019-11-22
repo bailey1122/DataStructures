@@ -1,4 +1,4 @@
-package com.datastructure.ds.treessgraphs;
+package com.datastructure.ds.interview.treessgraphs;
 
 import java.util.ArrayDeque;
 import java.util.Deque;

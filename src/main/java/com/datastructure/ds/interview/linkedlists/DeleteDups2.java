@@ -1,12 +1,9 @@
 package com.datastructure.ds.interview.linkedlists;
 
+import com.datastructure.ds.interview.impl.LinkedListNode;
+
 // O(N^2) time, O(1) space
 public class DeleteDups2 {
-
-    private class LinkedListNode {
-        private int data;
-        private LinkedListNode next;
-    }
 
     void deleteDups22(LinkedListNode head) {
         LinkedListNode current = head;

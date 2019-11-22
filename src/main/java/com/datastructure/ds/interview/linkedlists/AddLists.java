@@ -1,18 +1,8 @@
 package com.datastructure.ds.interview.linkedlists;
 
+import com.datastructure.ds.interview.impl.LinkedListNode;
+
 public class AddLists {
-
-    private class LinkedListNode {
-        private int data;
-        private LinkedListNode next;
-
-        public LinkedListNode() {
-        }
-
-        public void setNext(LinkedListNode next) {
-            this.next = next;
-        }
-    }
 
     LinkedListNode addLists1(LinkedListNode l1, LinkedListNode l2, int carry) {
         if (l1 == null && l2 == null && carry == 0) {

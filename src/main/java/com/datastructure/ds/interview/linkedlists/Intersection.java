@@ -1,12 +1,9 @@
 package com.datastructure.ds.interview.linkedlists;
 
+import com.datastructure.ds.interview.impl.LinkedListNode;
+
 // O(A+B) time, where A and B are the lengths of the two linked lists
 public class Intersection {
-
-    protected class LinkedListNode {
-        private int data;
-        private LinkedListNode next;
-    }
 
     LinkedListNode findIntersection(LinkedListNode list1, LinkedListNode list2) {
         if (list1 == null || list2 == null) return null;
@@ -57,7 +54,7 @@ public class Intersection {
     }
 
     private class Result {
-        public Intersection.LinkedListNode tail;
+        public LinkedListNode tail;
         public int size;
 
         public Result(LinkedListNode tail, int size) {

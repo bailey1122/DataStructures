@@ -1,21 +1,10 @@
 package com.datastructure.ds.interview.linkedlists;
 
+import com.datastructure.ds.interview.impl.LinkedListNode;
+
 import static jdk.nashorn.internal.objects.ArrayBufferView.length;
 
 public class AddLists2 {
-
-    protected class LinkedListNode {
-        private int data;
-        private LinkedListNode next;
-
-        public LinkedListNode() {
-        }
-
-        public LinkedListNode(int data) {
-            this.data = data;
-        }
-    }
-
 
     LinkedListNode addLists22(LinkedListNode l1, LinkedListNode l2) {
         int len1 = length(l1);
@@ -80,7 +69,7 @@ public class AddLists2 {
 }
 
 class PartialSum {
-    AddLists2.LinkedListNode sum = null;
+    LinkedListNode sum = null;
     int carry = 0;
 }
 

@@ -1,11 +1,8 @@
 package com.datastructure.ds.interview.linkedlists;
 
-public class DeleteMiddleNode {
+import com.datastructure.ds.interview.impl.LinkedListNode;
 
-    private class LinkedListNode {
-        private int data;
-        private LinkedListNode next;
-    }
+public class DeleteMiddleNode {
 
     boolean deleteNode(LinkedListNode n) {
         if (n == null || n.next == null) {
