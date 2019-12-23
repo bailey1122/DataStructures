@@ -1,4 +1,4 @@
-package com.datastructure.ds.bit;
+package com.datastructure.ds.interview.bit;
 
 // x = -93242, count = 40
 public class Shifts {

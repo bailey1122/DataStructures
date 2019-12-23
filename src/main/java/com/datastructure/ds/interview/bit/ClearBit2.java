@@ -1,4 +1,4 @@
-package com.datastructure.ds.bit;
+package com.datastructure.ds.interview.bit;
 
 public class ClearBit2 {
 
