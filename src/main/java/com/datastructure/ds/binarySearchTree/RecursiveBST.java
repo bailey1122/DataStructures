@@ -28,5 +28,6 @@ public class RecursiveBST {
 
         RecursiveBST bst = new RecursiveBST();
         System.out.print(bst.sort(1, h, 9));
+        System.out.println(5/2);
     }
 }
