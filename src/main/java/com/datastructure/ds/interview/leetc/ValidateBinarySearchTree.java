@@ -8,7 +8,7 @@ public class ValidateBinarySearchTree {
         int val;
         TreeNode left;
         TreeNode right;
-        TreeNode(int x) { val = x; }
+        public TreeNode(int x) { val = x; }
     }
 
     private boolean helper(TreeNode node, Integer lower, Integer upper) {
