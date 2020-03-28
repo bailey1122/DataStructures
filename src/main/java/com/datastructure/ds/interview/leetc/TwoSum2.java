@@ -1,18 +1,24 @@
 package com.datastructure.ds.interview.leetc;
 
-// TC: O(n^2)
-// SC: O(1)
+import java.util.HashMap;
+import java.util.Map;
+
+// TC: (n)
+// SC: O(n)
 public class TwoSum2 {
 
-    public int[] twoSum(int[] nums, int target) {
+    public int[] twoSum(int[] numbers, int target) {
+        Map<Integer, Integer> map = new HashMap<Integer, Integer>();
 
-        for (int i = 0; i < nums.length; i++) {
-            for (int j = i + 1; j < nums.length; j++) {
-                if (nums[j] == target - nums[i]) {
-                    return new int[] {i, j};
-                }
+        for (int i = 0; i < numbers.length; i++) {
+            int complement = target - numbers[i];
+            if (map.containsKey(complement)) {
+                return new int[] {map.get(complement) + 1, i + 1};
             }
+            map.put(numbers[i], i);
         }
-        throw new IllegalArgumentException("no two sum");
+
+        throw new IllegalArgumentException("no sum found");
     }
+
 }

@@ -61,9 +61,9 @@ public class ValidateBinarySearchTree {
         update(root, lower, upper);
 
         while (!stack.isEmpty()) {
-            root = stack.poll();
-            lower = lowers.poll();
-            upper = uppers.poll();
+            root = stack.pollLast();
+            lower = lowers.pollLast();
+            upper = uppers.pollLast();
 
             if (root == null) continue;
             val = root.val;
