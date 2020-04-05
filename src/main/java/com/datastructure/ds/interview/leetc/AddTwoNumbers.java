@@ -15,22 +15,34 @@ public class AddTwoNumbers {
      }
 
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
-        ListNode dumpHead = new ListNode(0);
-        ListNode p = l1, q = l2, curr = dumpHead;
+        ListNode dummy = new ListNode(0);
+        ListNode currNode = dummy;
+
+        ListNode q = l1, p = l2;
         int carry = 0;
-        while (p != null || q != null) {
-            int x = (p != null) ? p.val : 0;
-            int y = (q != null) ? q.val : 0;
+
+        while (q != null || p != null) {
+            int x = (q != null) ? q.val : 0;
+            int y = (p != null) ? p.val : 0;
+
             int sum = carry + x + y;
             carry = sum / 10;
-            curr.next = new ListNode(sum % 10);
-            curr = curr.next;
-            if (p != null) p = p.next;
+            int lastDigit = sum % 10;
+
+            ListNode node = new ListNode(lastDigit);
+            currNode.next = node;
+            currNode = currNode.next;
+
             if (q != null) q = q.next;
+            if (p != null) p = p.next;
         }
+
         if (carry > 0) {
-            curr.next = new ListNode(carry);
+            ListNode node = new ListNode(carry);
+            currNode.next = node;
+            currNode = currNode.next;
         }
-        return dumpHead.next;
+
+        return dummy.next;
     }
 }

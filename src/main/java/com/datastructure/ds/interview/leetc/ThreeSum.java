@@ -12,7 +12,7 @@ public class ThreeSum {
         List<List<Integer>> results = new ArrayList<List<Integer>>();
         Arrays.sort(nums);
 
-        for (int i = 0; i <= nums.length - 3; i++) {
+        for (int i = 0; i < nums.length - 2; i++) {
             if (i == 0 || nums[i] > nums[i - 1]) {
                 int start = i + 1;
                 int end = nums.length - 1;
