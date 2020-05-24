@@ -1,5 +1,7 @@
 package com.datastructure.ds.dynamicprog;
 
+// TC: O(N)
+// SC: O(N)
 // a tabulation method
 public class FibTab {
 
@@ -10,7 +12,7 @@ public class FibTab {
         f[0] = 0;
         f[1] = 1;
         for (int i = 2; i <= n; i++) {
-            f[i] = fib(n - 2) + fib(n - 1);
+            f[i] = f[i - 2] + f[i - 1];
         }
         return f[n];
     }

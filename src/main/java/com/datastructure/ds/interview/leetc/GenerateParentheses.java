@@ -18,4 +18,25 @@ public class GenerateParentheses {
         }
         return ans;
     }
+
+
+    // TC: O(4^n/root(n))
+    // SC: O(4^n/root(n))
+    public List<String> generateParenthesis2(int n) {
+        List<String> res = new ArrayList<String>();
+        backtrack(res, "", 0, 0, n);
+
+        return res;
+    }
+
+    private void backtrack(List<String> res, String currString,
+                           int open, int close, int max) {
+        if (currString.length() == max * 2) {
+            res.add(currString);
+            return;
+        }
+
+        if (open < max) backtrack(res, currString + "(", open + 1, close, max);
+        if (close < open) backtrack(res, currString + ")", open, close + 1, max);
+    }
 }

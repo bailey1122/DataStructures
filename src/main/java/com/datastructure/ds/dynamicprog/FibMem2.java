@@ -1,5 +1,7 @@
 package com.datastructure.ds.dynamicprog;
 
+// TC: O(N)
+// SC: O(N)
 // memoization
 public class FibMem2 {
 

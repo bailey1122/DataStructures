@@ -42,11 +42,4 @@ public class MyMergeSort2 {
             array[current + i] = helpArray[current + i];
         }
     }
-
-    public static void main(String[] args) {
-
-        char c = '[';
-        int ch = c;
-        System.out.println(ch);
-    }
 }
