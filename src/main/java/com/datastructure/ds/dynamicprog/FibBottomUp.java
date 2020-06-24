@@ -1,5 +1,6 @@
 package com.datastructure.ds.dynamicprog;
 
+// tabulation bottom up
 public class FibBottomUp {
 
     int fibonacci(int n) {

@@ -2,7 +2,7 @@ package com.datastructure.ds.dynamicprog;
 
 // O(2^N)
 // O(N)
-// a memoization method
+// a memoization method top down
 public class FibMem {
 
     int fib(int n) {

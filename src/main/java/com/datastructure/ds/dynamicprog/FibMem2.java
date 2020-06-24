@@ -2,7 +2,7 @@ package com.datastructure.ds.dynamicprog;
 
 // TC: O(N)
 // SC: O(N)
-// memoization
+// memoization top down
 public class FibMem2 {
 
     int fibonacci(int n) {
