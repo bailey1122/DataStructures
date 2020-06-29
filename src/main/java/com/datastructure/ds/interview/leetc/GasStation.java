@@ -30,17 +30,11 @@ public class GasStation {
 
     public void dos(int i) {
         if (i == 20) {
-            System.out.println(20);;
+            System.out.println(20);
         } else if (i == 5) {
             System.out.println(5);
         }
 
         System.out.println(++i);
-    }
-
-    public static void main(String[] args) {
-        GasStation s = new GasStation();
-        s.dos(5);
-
     }
 }

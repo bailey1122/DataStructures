@@ -1,8 +1,11 @@
 package com.datastructure.ds.interview.leetc;
 
+import java.util.Arrays;
+import java.util.List;
+
 public class LowestCommonAncestorOfABinarySearchTree {
 
-    private class TreeNode {
+    private static class TreeNode {
         int val;
         TreeNode left;
         TreeNode right;
