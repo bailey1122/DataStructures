@@ -1,5 +1,7 @@
 package com.datastructure.ds.algorithms;
 
+import java.util.Arrays;
+
 // divide and conquer. Merge sort
 public class MyMergeSort {
     int[] array;
@@ -7,31 +9,30 @@ public class MyMergeSort {
     int length;
 
     public static void main(String[] args) {
-        int[] inputArr = {10,80,40,30,70,20,90};
+        int[] inputArr = {10, 80, 40, 100, 30, 70, 20, 90};
         MyMergeSort ms = new MyMergeSort();
         ms.sort(inputArr);
 
-        for (int i : inputArr) {
-            System.out.print(i + " ");
-        }
+        System.out.println(Arrays.toString(inputArr));
+
     }
 
     public void sort(int[] inputArr) {
         this.array = inputArr;
         this.length = inputArr.length;
         this.tempMergeArr = new int[length]; // a temporary array
-        divideArray(0, length-1);
+        divideArray(0, length - 1);
     }
 
     public void divideArray(int lowerIndex, int higherIndex) {
         if (lowerIndex < higherIndex) {
-            int middle = lowerIndex+(higherIndex-lowerIndex)/2;
+            int middle = lowerIndex + (higherIndex - lowerIndex) / 2;
 
             // sorts the left side of an array
             divideArray(lowerIndex, middle); // 10 30 40 80
 
             // sorts the right side of an array
-            divideArray(middle+1, higherIndex); // 20 70 90
+            divideArray(middle + 1, higherIndex); // 20 70 90
 
             mergeArray(lowerIndex, middle, higherIndex);
         }
@@ -43,7 +44,7 @@ public class MyMergeSort {
         }
 
         int i = lowerIndex; // 0
-        int j = middle+1; // 4
+        int j = middle + 1; // 4
         int k = lowerIndex; // 0
 
         // copy the smallest values from either the left or the right side back to

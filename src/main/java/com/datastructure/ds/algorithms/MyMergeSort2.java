@@ -1,45 +1,65 @@
 package com.datastructure.ds.algorithms;
 
+import java.util.Arrays;
+
 public class MyMergeSort2 {
 
-    void mergeSort(int[] array) {
-        int[] helpArray = new int[array.length];
-        mergeSort(array, helpArray, 0, array.length - 1);
+    public static void main(String[] args) {
+        MyMergeSort2 m = new MyMergeSort2();
+        int[] inputArr = {10,80,40,100,30,70,20,90};
+
+        m.sortArr(inputArr);
+
+        System.out.println(Arrays.toString(inputArr));
+    }
+    int[] initArr, helperArr;
+    int n;
+
+    public void sortArr(int[] arr) {
+        mergeSort(arr);
     }
 
-    void mergeSort(int[] array, int[] helpArray, int low, int high) {
-        if (low < high) {
-            int middle = (low + high) / 2;
+    private void mergeSort(int[] arr) {
+        initArr = arr;
+        n = initArr.length;
+        helperArr = new int[n];
 
-            mergeSort(array, helpArray, low, middle);
-            mergeSort(array, helpArray, middle + 1, high);
-            merge(array, helpArray, low, middle, high);
+        divideArr(0, n - 1);
+    }
+
+    private void divideArr(int left, int right) {
+        if (left < right) {
+            int mid = left + (right - left) / 2;
+
+            divideArr(left, mid);
+            divideArr(mid + 1, right);
+
+            mergeArr(left, mid, right);
         }
     }
 
-    void merge(int[] array, int[] helpArray, int low, int middle, int high) {
-        for (int i = low; i <= high; i++) {
-            helpArray[i] = array[i];
+    private void mergeArr(int left, int mid, int right) {
+        for (int i = left; i <= right; i++) {
+            helperArr[i] = initArr[i];
         }
 
-        int leftHelper = low;
-        int rightHelper = middle + 1;
-        int current = low;
+        int i = left, m = mid + 1, curr = left;
 
-        while (leftHelper <= middle && rightHelper <= high) {
-            if (helpArray[leftHelper] <= helpArray[rightHelper]) {
-                array[current] = helpArray[leftHelper];
-                leftHelper++;
+        while (i <= mid && m <= right) {
+            if (helperArr[i] <= helperArr[m]) {
+                initArr[curr] = helperArr[i++];
             } else {
-                array[current] = helpArray[rightHelper];
-                rightHelper++;
+                initArr[curr] = helperArr[m++];
             }
-            current++;
+            curr++;
         }
 
-        int remaining = middle - leftHelper;
-        for (int i = 0; i <= remaining; i++) {
-            array[current + i] = helpArray[current + i];
+        while (i <= mid) {
+            initArr[curr++] = helperArr[i++];
+        }
+
+        while (m <= right) {
+            initArr[curr++] = helperArr[m++];
         }
     }
 }
