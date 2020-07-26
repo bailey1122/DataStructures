@@ -1,7 +1,5 @@
 package com.datastructure.ds.interview.leetc;
 
-import java.util.Arrays;
-
 public class ConstructBinarySearchTreeFromPreorderTraversal {
 
     class TreeNode {
